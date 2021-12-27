@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     func parseJSON() {
-        guard let path = Bundle.main.path(forResource: "testing", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "Plus15", ofType: "json") else {
             print("could not get json")
             return
         }
@@ -38,13 +38,16 @@ class ViewController: UIViewController {
 }
 
 struct Section: Codable {
-    let title: String
+    let structure_type: String!
     let type: String!
-    let structure: Structure
+    let the_geom: Structure
+    let revis_date: String!
+    let access_hours: String!
+    let modified_dt: String!
 }
 
 struct Structure: Codable {
     let type: String
-    let name: String!
+    let coordinates: [[[[Double]]]]
 }
 
