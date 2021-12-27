@@ -1,0 +1,16 @@
+[
+{
+    "title": "fruit",
+    "structure": {
+        "type": "fruit"
+    }
+},
+{
+    "title": "fruit",
+    "type": "apple",
+    "structure": {
+        "type": "fruit",
+        "name": "pair"
+    }
+}
+]
